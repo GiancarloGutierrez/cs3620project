@@ -2,4 +2,4 @@
 header("Access-Control-Allow-Origin: *");
 ?>
 
-{"books-read":[{"Title":"SomeName1","Author":"Don't Know"},{"Title":"SomeName2", "Author":"Don't Know"}]}
+{"books-read":[{"Title":"Living With Art","Author":"Mark Getlein"},{"Title":"Holes", "Author":"Louis Sachar"}]}
