@@ -1,8 +1,8 @@
 <?php
-$servername = "csgiancarlo";
-$username = "AdminGiancarlo";
+$servername = "csgiancarlo.mysql.database.azure.com";
+$username = "AdminGiancarlo@csgiancarlo";
 $password = "logit78!";
-$dbname = "csgiancarlo";
+$dbname = "cs3620";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
