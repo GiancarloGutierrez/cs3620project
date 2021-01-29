@@ -1,7 +1,9 @@
 <?php
+session_start();
 $servername = "csgiancarlo.mysql.database.azure.com";
-$username = $_ENV['SQLUSER'];
-$password = $_ENV['SQLPW'];
+
+$username = (isset($_SESSION["SQLUSER"]) ? $_SESSION["SQLUSER"] :$_ENV['SQLUSER']);
+$password = (isset($_SESSION["SQLPW"]) ? $_SESSION["SQLUSER"]:$_ENV['SQLPW']);
 $dbname = "cs3620";
 
 // Create connection
