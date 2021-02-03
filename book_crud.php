@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 
 if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
-        echo "ShowID: " . $row["showId"]. " - Title: " .$row["showTitle"]."<br>";
+        echo "<br>"."ShowID: " . $row["showId"]. " - Title: " .$row["showTitle"]."<br>";
     }
 } else {
     echo "0 results";
