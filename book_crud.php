@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$sql = "SELECT showId, showTitle FROM shows";
+$sql = "SELECT showId, showTitle FROM shows WHERE showID = 3";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
