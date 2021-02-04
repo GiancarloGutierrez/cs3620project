@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$sql = "SELECT bookId, bookTitle, bookAuthor FROM books WHERE showID = 1";
+$sql = "SELECT bookId, bookTitle, bookAuthor FROM books WHERE bookId = 1";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
@@ -30,10 +30,10 @@ if($result->num_rows > 0){
         echo "<br>"."BookID: " . $row["bookId"]. " - BookTitle: " .$row["bookTitle"]." - BookAuthor: ".$row["bookAuthor"]."<br>";
     }
 } else {
-    echo "0 results";
+    echo "<br>"."0 results"."<br>";
 }
 
-$sql = "DELETE FROM book WHERE bookId = 1";
+$sql = "DELETE FROM books WHERE bookId = 1";
 
 if($conn->query($sql) === TRUE){
     echo "Record deleted successfully";
