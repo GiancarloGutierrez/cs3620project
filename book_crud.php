@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO books (bookId,bookTitle,bookAuthor)
-VALUES (1,"Think and Grow Rich","Napoleon Hill")";
+VALUES (1,'Think and Grow Rich','Napoleon Hill')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
