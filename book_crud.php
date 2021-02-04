@@ -13,8 +13,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO shows (showId,showTitle)
-VALUES (3,'Overlord')";
+$sql = "INSERT INTO books (bookId,bookTitle,bookAuthor)
+VALUES (1,'Think and Grow Rich","Napoleon Hill")";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -22,18 +22,18 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$sql = "SELECT showId, showTitle FROM shows WHERE showID = 3";
+$sql = "SELECT bookId, bookTitle, bookAuthor FROM books WHERE showID = 1";
 $result = $conn->query($sql);
 
 if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
-        echo "<br>"."ShowID: " . $row["showId"]. " - Title: " .$row["showTitle"]."<br>";
+        echo "<br>"."BookID: " . $row["bookId"]. " - BookTitle: " .$row["bookTitle"]." - BookAuthor: ".$row["bookAuthor"]."<br>";
     }
 } else {
     echo "0 results";
 }
 
-$sql = "DELETE FROM shows WHERE showId = 3";
+$sql = "DELETE FROM book WHERE bookId = 1";
 
 if($conn->query($sql) === TRUE){
     echo "Record deleted successfully";
