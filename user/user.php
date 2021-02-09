@@ -28,7 +28,7 @@ Class User{
         $this->username = $username;
     }
     public function getUserID(){
-        return $this->$user_id;
+        return $this->user_id;
     }
     public function setUserID($user_id){
         $this->user_id= $user_id;
@@ -42,7 +42,7 @@ Class User{
     public function getLastName(){
         return $this->last_name;
     }
-    public function setLastName(){
+    public function setLastName($last_name){
         $this->last_name = $last_name;
     }
 }

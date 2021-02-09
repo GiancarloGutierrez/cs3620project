@@ -9,7 +9,7 @@
 
     echo $user->getUsername();
     echo "<br />";
-    echo $user->getFistName();
+    echo $user->getFirstName();
     echo "<br />";
     echo $user->getLastName();
 ?>
