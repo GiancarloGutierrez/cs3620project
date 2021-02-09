@@ -20,5 +20,6 @@ class userDAO{
         $conn->close();
         }
     }
+    }
 }
 ?>
