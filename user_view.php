@@ -6,7 +6,8 @@
 
     $user = new user();
     $user->getUser(1);
-
+    echo $user->getUserID();
+    echo "<br />";
     echo $user->getUsername();
     echo "<br />";
     echo $user->getFirstName();
