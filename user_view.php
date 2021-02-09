@@ -8,4 +8,11 @@
     $user->getUser(1);
 
     echo $user->getUsername();
+    echo "<br />";
+    echo $user->getFistName();
+    echo "<br />";
+    echo $user->getLastName();
+?>
+<?php
+    require_once('./footer.php');
 ?>
