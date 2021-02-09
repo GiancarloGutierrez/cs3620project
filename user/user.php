@@ -31,7 +31,7 @@ Class User{
         return $this->user_id;
     }
     public function setUserID($user_id){
-        $this->user_id= user_id;
+        $this->user_id= $user_id;
     }
     public function getFirstName(){
         return $this->first_name;
