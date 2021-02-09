@@ -27,7 +27,7 @@ Class User{
     public function setUsername($username){
         $this->username = $username;
     }
-    public function getUserID($user_id){
+    public function getUserID(){
         return $this->$user_id;
     }
     public function setUserID($user_id){
