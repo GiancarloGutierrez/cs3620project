@@ -1,3 +1,3 @@
 <h1>
- This is a footer!
+ This is a alt footer!
 </h1>

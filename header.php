@@ -5,5 +5,5 @@ error_reporting(E_ALL);
 ?>
 
 <h1>
-This is the header!
+This is the alt header!
 </h1>
