@@ -19,6 +19,14 @@ Class User{
         $userDAO->getUser($this);
         return $this;
     }
+    
+    public function createUser(){
+        $userDAO = new userDAO();
+        $userDAO->createUser($this);
+    }
+    public function setPassword($password){
+        $this->password = hash("sha256",$password);
+    }
 
     public function getUserName(){
         return $this->username;
@@ -44,6 +52,13 @@ Class User{
     }
     public function setLastName($last_name){
         $this->last_name = $last_name;
+    }
+    public function getPassword(){
+        return $this->password;
+    }
+    public function deleteUser($username){
+        $userDAO = new userDAO();
+        $userDAO->deleteUser($username);
     }
 }
 
