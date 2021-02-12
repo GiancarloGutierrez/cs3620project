@@ -4,7 +4,7 @@ class userDAO{
     public function getUser($user){
         require_once('./utilities/connection.php');
 
-        $sql = ("SELECT first_name, last_name, username, user_id FROM user WHERE user_id = 1");
+        $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE user_id = 1");
         $result = $conn->query($sql);
 
         if($result->num_rows>0){
@@ -13,7 +13,7 @@ class userDAO{
                 $user->setUserID($row["user_id"]);
                 $user->setFirstName($row["first_name"]);
                 $user->setLastName($row["last_name"]);
-                $user->setUserName($row["username"]);
+                $user->setUserName($row["username1"]);
             }
         } else {
             echo "0 results";
@@ -37,6 +37,7 @@ class userDAO{
             '". $user->getFirstName() ."',
             '". $user->getLastName() ."'
         );";
+        echo $sql;
         $result= $conn->query($sql);
         $conn->close();
         echo "Created User";
