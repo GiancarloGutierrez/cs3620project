@@ -4,7 +4,7 @@ class userDAO{
     public function getUser($user){
         require_once('./utilities/connection.php');
 
-        $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE user_id = 1");
+        $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE user_id =".$user->getUserID());
         $result = $conn->query($sql);
 
         if($result->num_rows>0){
