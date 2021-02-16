@@ -6,7 +6,7 @@
     require_once('./user/user.php');
 
     $user = new user();
-    $user->getUser($_GET["id"]);
+    $user->getUser($_GET["value1"],$_GET["option1"]);
 
     echo json_encode($user);
 ?>

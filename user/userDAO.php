@@ -1,10 +1,24 @@
 <?php
 
 class userDAO{
-    public function getUser($user){
+    public function getUser($user,$option1){
         require_once('./utilities/connection.php');
-
-        $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE user_id =".$user->getUserID());
+        $sql = "";
+        switch($option1){
+            case "userid":
+                $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE user_id =".$user->getUserID());
+                break;
+            case "userName":
+                $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE username1 =".$user->getUserName());
+                break;
+            case "firstName";
+                $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE first_name =".$user->getFirstName());
+                break;
+            case "lastName";
+                 $sql = ("SELECT first_name, last_name, username1, user_id FROM user WHERE last_name =".$user->getLastName());
+                break;
+        }
+        
         $result = $conn->query($sql);
 
         if($result->num_rows>0){

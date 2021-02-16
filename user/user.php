@@ -12,11 +12,23 @@ Class User implements \JsonSerializable{
     function __construct(){
 
     }
-    public function getUser($user_id){
-        $this->user_id = $user_id;
-
+    public function getUser($value1,$option1){
+        switch ($option1){
+            case "userid":
+                $this->user_id = $value1;
+                break;
+            case "userName":
+                $this->username = $value1;
+                break;
+            case "firstName";
+                $this->first_name = $value1;
+                break;
+            case "lastName";
+                $this->last_name = $value1;
+                break;
+        }
         $userDAO = new userDAO();
-        $userDAO->getUser($this);
+        $userDAO->getUser($this,$option1);
         return $this;
     }
     
