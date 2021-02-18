@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin: *");
 class userDAO{
     public function getUser($user,$option1){
         require_once('./utilities/connection.php');

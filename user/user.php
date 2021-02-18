@@ -1,5 +1,7 @@
 <?php
 require_once('./user/userDAO.php');
+header("Access-Control-Allow-Origin: *");
+
 Class User implements \JsonSerializable{
     //Properties
     private $username;
