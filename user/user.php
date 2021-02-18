@@ -18,13 +18,13 @@ Class User implements \JsonSerializable{
                 $this->user_id = $value1;
                 break;
             case "userName":
-                $this->username = $value1;
+                $this->username = "'".$value1."'";
                 break;
             case "firstName";
-                $this->first_name = $value1;
+                $this->first_name = "'".$value1."'";
                 break;
             case "lastName";
-                $this->last_name = $value1;
+                $this->last_name = "'".$value1."'";
                 break;
         }
         $userDAO = new userDAO();
